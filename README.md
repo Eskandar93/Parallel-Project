@@ -5,9 +5,13 @@ A Java application that reads student grades from multiple files using multi-thr
 # Features
 
 Multi-threaded file processing
+
 Concurrent grade data extraction
+
 Thread-safe operations
+
 Configurable thread pool size
+
 Error handling for file operations
 
 # Prerequisites
