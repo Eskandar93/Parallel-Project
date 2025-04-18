@@ -10,31 +10,31 @@ Thread-safe operations
 Configurable thread pool size
 Error handling for file operations
 
-#Prerequisites
+# Prerequisites
 Java JDK 8 or later
 
-#Project Structure Copy
+# Project Structure Copy
 
 student-grades-processor/ ├── src/ │ ├── main/ │ │ ├── java/ │ │ │ ├── model/ │ │ │ │ └── Student.java │ │ │ ├── service/ │ │ │ │ └── GradeProcessor.java │ │ │ └── Main.java │ │ └── resources/ │ │ ├── grades1.txt │ │ ├── grades2.txt │ │ └── grades3.txt ├── target/ (generated after build) ├── pom.xml └── README.md
 
-#Configuration
+# Configuration
 Modify these settings in Main.java:
 numberOfThreads: Controls thread pool size
 gradeFiles array: Specify input file paths
 
-#File Format Example
+# File Format Example
 
 Example grade file (grades1.txt): Copy
 101, Ahmed Mohamed, 85.5 102, Sara Ali, 92.0 103, Mohamed Hassan, 78.5
 
-#Expected Output
+# Expected Output
 
 The program will display:
 Processing status for each file
 Number of students processed per file
 Detailed student information
 
-#Performance Considerations
+# Performance Considerations
 
 Optimal thread count depends on your CPU cores
 Larger files benefit more from parallel processing
