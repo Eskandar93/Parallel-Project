@@ -16,7 +16,6 @@ public class Main {
         int numberOfThreads = 3;
         ExecutorService executor = Executors.newFixedThreadPool(numberOfThreads);
 
-        // قائمة الملفات المراد معالجتها
         File[] gradeFiles = {
                 new File("src/resources/file1.txt"),
                 new File("src/resources/file2.txt"),
