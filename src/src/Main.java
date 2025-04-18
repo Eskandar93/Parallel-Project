@@ -12,8 +12,7 @@ import service.GradeProcessor;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-	     // تحديد عدد الـ threads المطلوبة
+	
         int numberOfThreads = 3;
         ExecutorService executor = Executors.newFixedThreadPool(numberOfThreads);
 
@@ -25,12 +24,10 @@ public class Main {
         };
 
         try {
-            // إرسال المهام إلى الـ executor
             for (File file : gradeFiles) {
                 GradeProcessor processor = new GradeProcessor(file);
                 Future<List<Student>> future = executor.submit(processor);
                 
-                // يمكنك معالجة النتائج هنا إذا أردت
                 List<Student> students = future.get();
                 System.out.println("Processed " + students.size() + " students from " + file.getName());
                 students.forEach(System.out::println);
